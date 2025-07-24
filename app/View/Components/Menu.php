@@ -40,27 +40,27 @@ class Menu extends Component
                 'route' => 'profile.index',
                 'show' => false,
             ],
-            // (object) [
-            //     'name' => 'Penjadwalan',
-            //     'icon' => 'mdi mdi-calendar-multiselect',
-            //     'route' => null,
-            //     'show' => true,
-            //     'slug' => 'schedule',
-            //     'submenus' => [
-            //         (object) [
-            //             'name' => 'Jadwal Reguler',
-            //             'icon' => 'ri-calendar-todo-line',
-            //             'route' => 'regular',
-            //             'show' => true,
-            //         ],
-            //         (object) [
-            //             'name' => 'Jadwal Shift',
-            //             'icon' => 'ri-calendar-2-fill ',
-            //             'route' => 'sift',
-            //             'show' => true,
-            //         ],
-            //     ],
-            // ],
+            (object) [
+                'name' => 'Menara',
+                'icon' => 'ri-signal-tower-fill',
+                'route' => null,
+                'show' => true,
+                'slug' => 'menara',
+                'submenus' => [
+                    (object) [
+                        'name' => 'Data Menara',
+                        'icon' => 'ri-stack-fill',
+                        'route' => 'menara.data.index',
+                        'show' => true,
+                    ],
+                    (object) [
+                        'name' => 'Data Perizinan',
+                        'icon' => 'mdi mdi-file-sign',
+                        'route' => 'menara.perizinan.index',
+                        'show' => true,
+                    ],
+                ],
+            ],
         ];
 
         $user = [

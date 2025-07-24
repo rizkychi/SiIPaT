@@ -15,5 +15,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/password', [App\Http\Controllers\Dash\DashboardController::class, 'password'])->name('password.index')->middleware('role:superadmin,user');
     Route::put('/password', [App\Http\Controllers\Dash\DashboardController::class, 'passwordUpdate'])->name('password.update')->middleware('role:superadmin,user');
 
-    
+    Route::prefix('menara')->name('menara.')->group(function () {
+        Route::resource('/data', App\Http\Controllers\Dash\MenaraController::class)->parameters(['data' => 'id'])->middleware('role:superadmin,user');
+
+        Route::resource('/perizinan', App\Http\Controllers\Dash\MenaraPerizinanController::class)->parameters(['perizinan' => 'id'])->middleware('role:superadmin,user');
+    });
 });
